@@ -13,29 +13,21 @@ function arrayToList (array) {
   return list
 }
 
-// function arrayToList (array) {
-//   let list = {}
-//   array.forEach((item, i) => {
-//     if(i === 0) {
-//       list.value = item;
-//       list.rest = {}
-//     } else if(i === 1) {
-//       list.rest.value = item;
-//       list.rest.rest = {}
-//     } else {
-//       list.rest.rest.value = item;
-//       list.rest.rest.rest = null
-//     }
-//   });
-//   return list
-// }
 
 function listToArray (list) {
   let arr = []
-
+  let listItem = list;
+  while(listItem.rest !== null) {
+    arr.push(listItem.value)
+    listItem = listItem.rest
+  }
+  arr.push(listItem.value)
+  return arr
 }
 
 const arr = [1,2,3]
 console.log(arrayToList(arr))
 console.log(arrayToList([10, 20]));
 // → {value: 10, rest: {value: 20, rest: null}}
+console.log(listToArray(arrayToList([10, 20, 30])));
+// → [10, 20, 30]
