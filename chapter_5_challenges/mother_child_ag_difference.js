@@ -24,3 +24,10 @@ function ageDiff(array) {
 
 console.log(ageDiff(ancestry))
 // console.log(ancestry)
+
+// author solution
+// var differences = ancestry.filter(function (person) {
+//   return byName[person.mother] != null;
+// }).map(function (person) {
+//   return person.born - byName[person.mother].born;
+// });
