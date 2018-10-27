@@ -12,8 +12,10 @@ Vector.prototype.minus = function(func) {
 }
 
 Vector.prototype.length = function() {
+  
   let distance = Math.sqrt((this.x * this.x) + (this.y * this.y))
-  return distance
+  return this.x
+  // return distance
 }
 
 
