@@ -1,6 +1,6 @@
 function Vector(x, y)  {
-  this.x = x;
-  this.y = y;
+  this.x = x
+  this.y = y
 }
 
 Vector.prototype.plus = function(func) {
@@ -18,7 +18,11 @@ Vector.prototype.length = function() {
   // return distance
 }
 
-
+Object.defineProperties(Vector.prototype, {
+  length: {
+    get: function () { return Math.sqrt((this.x * this.x) + (this.y * this.y)) }
+  }
+});
 
 
 
