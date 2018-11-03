@@ -11,12 +11,12 @@ Vector.prototype.minus = function(func) {
   return `Vector {x: ${this.x - func.x}, y: ${this.y - func.y}}`
 }
 
-Vector.prototype.length = function() {
+// Vector.prototype.length = function() {
   
-  let distance = Math.sqrt((this.x * this.x) + (this.y * this.y))
-  return this.x
-  // return distance
-}
+//   let distance = Math.sqrt((this.x * this.x) + (this.y * this.y))
+//   return this.x
+//   // return distance
+// }
 
 Object.defineProperties(Vector.prototype, {
   length: {
