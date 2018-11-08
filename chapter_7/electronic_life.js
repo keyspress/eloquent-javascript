@@ -105,7 +105,7 @@ World.prototype.toString = function() {
 }
 function Wall() {}
 
-// let world = new World(plan, {"#": Wall, "o": BouncingCritter});
+let world = new World(plan, {"#": Wall, "o": BouncingCritter});
 // console.log(world.toString());
 World.prototype.turn = function() {
   let acted = [];
@@ -159,3 +159,8 @@ View.prototype.find = function(ch) {
   if(found.length == 0) return null;
   return randomElement(found);
 };
+
+for(let i =0; i < 5; i++) {
+  world.turn();
+  console.log(world.toString());
+}
